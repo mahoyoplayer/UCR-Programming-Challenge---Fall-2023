@@ -31,4 +31,26 @@ class FastIO:
     def getStrs() -> list[str]:
         return FastIO.input().decode().split()
 
-print("Hello World!")
+base = ord("A")
+inp, tl, s = FastIO.getStr(), FastIO.getStr(), FastIO.getStr()
+used_encode = {}
+used_decode = {}
+
+fail = False
+for i in range(len(inp)):
+    a, b = inp[i], tl[i]
+    idx = ord(a) - base
+    if used_encode.get(a, b) != b or used_decode.get(b, a) != a:
+        fail = True
+        break
+    used_encode[a] = b
+    used_decode[b] = a
+
+
+fail = fail or len(used_encode) != 26
+
+if fail:
+    print("Failed")
+else:
+    print("".join([used_encode[c] for c in s]))
+
