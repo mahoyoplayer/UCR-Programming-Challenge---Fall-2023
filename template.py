@@ -31,4 +31,4 @@ class FastIO:
     def getStrs() -> list[str]:
         return FastIO.input().decode().split()
 
-print("Hello World")
+print("Hello World!")
