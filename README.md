@@ -1,2 +1,2 @@
 # Codeforces_Template
-Template for Codeforces contests
+https://codeforces.com/group/wiMhgtaznM/contest/473827
