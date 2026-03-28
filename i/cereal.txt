@@ -1,0 +1,4 @@
+3
+5 6 16
+
+Expected Answer: 1
